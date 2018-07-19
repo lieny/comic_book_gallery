@@ -6,7 +6,11 @@ using System.Web.Mvc;   //using deractive for Controller
 
 namespace ComicBookGallery.Controllers
 {
-    public class ComicBooksController : Controller
+    public class ComicBooksController : Controller  //controller classes need to be public
     {
+        public string Detail()
+        {
+            return "Hello from the comic books controller.";
+        }
     }
 }
