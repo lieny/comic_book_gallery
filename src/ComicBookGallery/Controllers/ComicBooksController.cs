@@ -8,9 +8,13 @@ namespace ComicBookGallery.Controllers
 {
     public class ComicBooksController : Controller  //controller classes need to be public
     {
-        public string Detail()
+        public ActionResult Detail()
         {
-            return "Hello from the comic books controller.";
+            if(DateTime.Today.DayOfWeek == DayOfWeek.Thursday)
+            {
+                return Redirect("/");
+            }
+            return Content("Hello from the Comic Books Controller!");
         }
     }
 }
